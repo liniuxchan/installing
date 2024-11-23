@@ -3,7 +3,7 @@ read -sp "enter password" password
 echo
 pkg update && pkg upgrade -y
 pkg install expect -y
-pkg install send -y
+pkg install tcl -y
 pkg install x11-repo
 pkg install tigervnc -y
 vncserver :1 -geometry 1280x720
