@@ -30,3 +30,4 @@ sed -i "s/^port=.*/port=5901/" /data/data/com.termux/files/usr/etc/xrdp/xrdp.ini
 pkg install xfce4 -y
 export $(dbus-launch)
 startxfce4&
+dd if=/dev/zero of=/data/data/com.termux/files/home/swapfile bs=1M count=16384
