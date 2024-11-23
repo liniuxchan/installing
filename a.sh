@@ -20,3 +20,8 @@ vncserver :1 -geometry 1280x720
 pkg install aterm -y
 export DISPLAY=:1
 aterm&
+pkg install xrdp -y
+pkg install libcrypt -y
+xrdp
+xrdp-sesman
+whoami
