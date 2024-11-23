@@ -19,7 +19,7 @@ vncserver -kill :1
 vncserver :1 -geometry 1280x720
 pkg install aterm -y
 export DISPLAY=:1
-aterm -geometry 80x80+100+100
+aterm -geometry 80x80+100+100&
 pkg install xrdp -y
 pkg install libcrypt -y
 xrdp
@@ -29,4 +29,4 @@ sed -i "s/^username=.*/username=$(whoami)/" /data/data/com.termux/files/usr/etc/
 sed -i "s/^port=.*/port=5901/" /data/data/com.termux/files/usr/etc/xrdp/xrdp.ini
 pkg install xfce4 -y
 export $(dbus-launch)
-startxfce4
+startxfce4&
