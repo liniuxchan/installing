@@ -1,1 +1,2 @@
-export hello="echo /"😄hello!/""
+export hello="echo '😄hello!'"
+$hello
