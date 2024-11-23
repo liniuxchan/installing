@@ -10,5 +10,10 @@ $password
 $password
 n
 EOF
+vncpasswd <<EOF
+$password
+$password
+n
+EOF
 vncserver :1 -geometry 1280x720
 
