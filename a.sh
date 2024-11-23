@@ -4,7 +4,8 @@ echo
 pkg update && pkg upgrade -y
 pkg install x11-repo
 pkg install tigervnc -y
-vncpasswd <<EOF
+pkg install termux-auth -y
+passwd <<EOF
 $password
 $password
 n
