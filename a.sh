@@ -10,7 +10,7 @@ $password
 $password
 n
 EOF
-vncpasswd <<EOF
+vncserver <<EOF
 $password
 $password
 n
