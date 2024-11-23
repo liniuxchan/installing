@@ -25,4 +25,4 @@ pkg install libcrypt -y
 xrdp
 xrdp-sesman
 whoami
-sed -i "s/^username=.*/username=$(whoami)/" /data/data/com.termux/files/user/etc/xrdp/xrdp.ini
+sed -i "s/^username=.*/username=$(whoami)/" /data/data/com.termux/files/usr/etc/xrdp/xrdp.ini
