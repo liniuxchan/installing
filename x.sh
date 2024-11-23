@@ -31,3 +31,5 @@ pkg install xfce4 -y
 export $(dbus-launch)
 startxfce4&
 dd if=/dev/zero of=/data/data/com.termux/files/home/swapfile bs=1M count=16384
+mkswap /data/data/com.termux/files/home/swapfile
+swapon /data/data/com.termux/files/home/swapfile
