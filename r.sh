@@ -1,6 +1,7 @@
 export DISPLAY=:1
 #pkill xrdp
 #pkill xrdp-sessman
+rm /data/data/com.termux/files/usr/tmp/.X1-lock
 echo "kill xrdp"
 ps aux | grep xrdp | grep -v grep | awk '{print $2}' | xargs kill -9
 echo "kill vnc"
