@@ -10,10 +10,11 @@ $password
 $password
 n
 EOF
-vncserver <<EOF
+vncserver :1 <<EOF
 $password
 $password
 n
 EOF
+vncserver -kill :1
 vncserver :1 -geometry 1280x720
 
