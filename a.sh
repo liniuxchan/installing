@@ -1,5 +1,6 @@
 echo "Hi! I'm Liniux-chan."
 read -sp "enter password" password
+echo
 pkg update && pkg upgrade -y
 pkg except -y
 pkg install x11-repo
