@@ -1,6 +1,7 @@
 export DISPLAY=:1
 #pkill xrdp
 #pkill xrdp-sessman
+rm /data/data/com.termux/files/usr/var/run/xrdp.pid
 rm /data/data/com.termux/files/usr/var/run/xrdp-sesman.pid
 rm /data/data/com.termux/files/usr/tmp/.X11-unix/X1
 rm -f /data/data/com.termux/files/usr/tmp/.X1-lock
