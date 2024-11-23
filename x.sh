@@ -28,3 +28,5 @@ whoami
 sed -i "s/^username=.*/username=$(whoami)/" /data/data/com.termux/files/usr/etc/xrdp/xrdp.ini
 sed -i "s/^port=.*/port=5901/" /data/data/com.termux/files/usr/etc/xrdp/xrdp.ini
 pkg install xfce4 -y
+export $(dbus-launch)
+startxfce4
