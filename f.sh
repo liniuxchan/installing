@@ -14,6 +14,6 @@ X509Key=~/.vnc/myvnc.key
 X509Cert=~/.vnc/myvnc.crt"　|　tee ~/.vnc/config
 vncsever :1
 unset liniuxchan_your_vnc_password
-set
+#set
 set +x
 
