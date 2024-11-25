@@ -7,7 +7,8 @@ read -s liniuxchan_your_vnc_password
 
 # パスワードを確認
 echo "入力されたパスワードは変数に保存されました"
-set +×
+
 unset liniuxchan_your_vnc_password
 set
+set +x
 
