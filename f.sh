@@ -9,6 +9,7 @@ read -s liniuxchan_your_vnc_password
 echo "入力されたパスワードは変数に保存されました"
 
 openssl req -x509 -newkey rsa:4096 -keyout ~/.vnc/vncserver.key -out ~/.vnc/vncserver.crt -days 365
+mk ~/.vnc/config
 echo "SecurityTypes=vencrypt,x509vnc
 X509Key=~/.vnc/myvnc.key
 X509Cert=~/.vnc/myvnc.crt">>~/.vnc/config
