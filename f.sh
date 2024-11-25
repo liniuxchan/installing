@@ -10,14 +10,13 @@ while true; do
     echo "😆!thx!"
     break
   else
-    echo "😉6 or more!"
+    echo "😚6 or more!"
   fi
 done
 
 mkdir ~/.vnc
 openssl req -x509 -newkey rsa:4096 -keyout ~/.vnc/vncserver.key -out ~/.vnc/vncserver.crt -days 365 -nodes -subj "/C=JP/ST=vurtualTokyo/L=vurtual渋Shibuya/O=Liniuxchan and Friends/OU=playing with linux/CN=liniuxchan on your phone"
-printf
-'SecurityTypes=vencrypt,x509vnc\nX509Key=~/.vnc/myvnc.key\nX509Cert=~/.vnc/myvnc.crt'　> ~/.vnc/configLiniux
+printf　'SecurityTypes=vencrypt,x509vnc\nX509Key=~/.vnc/myvnc.key\nX509Cert=~/.vnc/myvnc.crt'　> ~/.vnc/configLiniux
 vncserver :1
 unset liniuxchan_your_vnc_password
 #set
