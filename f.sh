@@ -8,9 +8,9 @@ read -s liniuxchan_your_vnc_password
 # パスワードを確認
 echo "入力されたパスワードは変数に保存されました"
 
-openssl genpkey -algorithm RSA -out private.key -aes256
-openssl req -new -key private.key -out request.csr
-openssl x509 -req -in request.csr -signkey private.key -out certificate.crt -days 365
+openssl genpkey -algorithm RSA -out vncserver.key -aes256
+openssl req -new -key vncserver.key -out vncserver.csr
+openssl x509 -req -days 365 -in vncserver.csr -signkey vncserver.key -out vncserver.crt
 
 unset liniuxchan_your_vnc_password
 set
