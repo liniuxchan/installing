@@ -11,7 +11,7 @@ while true; do
     break
   else
     echo "😉6 or more!"
-  fi)
+  fi
 done
 
 mkdir ~/.vnc
