@@ -17,7 +17,7 @@ pkg install openssl-tool tigervnc fluxbox firefox -y && pkg upgrade -y
 mkdir ~/.vnc
 openssl req -x509 -newkey rsa:2048 -keyout ~/.vnc/vncserver.key -out ~/.vnc/vncserver.crt -days 365 -nodes -subj "/C=JP/ST=vurtualTokyo/L=vurtual Shibuya/O=Liniuxchan and Friends/OU=playing with linux/CN=liniuxchan on your phone"
 rm ~/.vnc/config
-printf "SecurityTypes=vencrypt,x509vnc\nX509Key=/data/data/com.termux/files/home/.vnc/vncserver.key\nX509Cert=/data/data/com.termux/files/home/.vnc/vncserver.crt\n" >> ~/.vnc/config
+printf "SecurityTypes=X509Vnc\nX509Key=/data/data/com.termux/files/home/.vnc/vncserver.key\nX509Cert=/data/data/com.termux/files/home/.vnc/vncserver.crt\n" >> ~/.vnc/config
 echo $password
 # 自動的にパスワードを設定
 pkill vnc
