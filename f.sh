@@ -19,6 +19,7 @@ openssl req -x509 -newkey rsa:4096 -keyout ~/.vnc/vncserver.key -out ~/.vnc/vncs
 printf "SecurityTypes=vencrypt,x509vnc\nX509Key=/data/data/com.termux/files/home/.vnc/vncserver.key\nX509Cert=/data/data/com.termux/files/home/.vnc/vncserver.crt\n" >> ~/.vnc/config
 echo $password
 # 自動的にパスワードを設定
+pkill vnc
 echo -e "$password\n$password\nn" | vncserver :1
 unset liniuxchan_your_vnc_password
 #set
