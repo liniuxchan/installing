@@ -16,7 +16,7 @@ pkg install openssl-tool tigervnc fluxbox firefox -y && pkg upgrade -y
 # パスワードを非表示で入力させて変数に保存
 mkdir ~/.vnc
 openssl req -x509 -newkey rsa:4096 -keyout ~/.vnc/vncserver.key -out ~/.vnc/vncserver.crt -days 365 -nodes -subj "/C=JP/ST=vurtualTokyo/L=vurtual Shibuya/O=Liniuxchan and Friends/OU=playing with linux/CN=liniuxchan on your phone"
-printf "SecurityTypes=vencrypt,tlsvnc,x509vnc\nX509Key=~/.vnc/vncserver.key\nX509Cert=~/.vnc/vncserver.crt\n" >> ~/.vnc/config
+printf "SecurityTypes=vencrypt,tlsvnc\nX509Key=/data/data/com.termux/files/home/.vnc/vncserver.key\nX509Cert=/data/data/com.termux/files/home/.vnc/vncserver.crt\n" >> ~/.vnc/config
 echo $password
 # 自動的にパスワードを設定
 echo -e "$password\n$password\nn" | vncserver :1
