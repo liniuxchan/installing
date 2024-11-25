@@ -2,16 +2,16 @@ pkg install x11-repo && pkg update
 pkg install openssl-tool tigervnc fluxbox firefox -y && pkg upgrade -y
 #set -x
 # パスワードを非表示で入力させて変数に保存
-echo "🥳hello! I'm liniuxchan!"
+echo "🥳みんなHello everyone! I'm Liniuxchan!"
 while true; do
-  read -s -p "🤗Tell me your vnc-password!" password
+  read -s -p "🤗設定するVNCパスワードを教えて!Tell me your vnc-password!" password
   echo
   if [ ${#password} -ge 6 ]; then
-    echo "😆thx!"
+    echo "😆ありがとう!thx!"
     break
   else
-    echo "😉6 or more!"
-  fi
+    echo "😉６文字以上必要なんだって!(6 or more)!"
+  fi)
 done
 
 mkdir ~/.vnc
