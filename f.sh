@@ -4,7 +4,7 @@ pkg install openssl-tool tigervnc fluxbox firefox -y && pkg upgrade -y
 # パスワードを非表示で入力させて変数に保存
 echo "🥳Hello everyone! I'm Liniuxchan!"
 while true; do
-  read -s -p "🤗Tell me your vnc-password!:" password
+  read -s -p "🤗Tell me your vnc-password! :" password
   echo
   if [ ${#password} -ge 6 ]; then
     echo "😆!thx!"
