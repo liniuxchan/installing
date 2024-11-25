@@ -16,7 +16,7 @@ done
 
 mkdir ~/.vnc
 openssl req -x509 -newkey rsa:4096 -keyout ~/.vnc/vncserver.key -out ~/.vnc/vncserver.crt -days 365 -nodes -subj "/C=JP/ST=vurtualTokyo/L=vurtual Shibuya/O=Liniuxchan and Friends/OU=playing with linux/CN=liniuxchan on your phone"
-printf "SecurityTypes=vencrypt,x509vnc\nX509Key=~/.vnc/vncserver.key\nX509Cert=~/.vnc/myvncserver.crt\n" >> ~/.vnc/config
+printf "SecurityTypes=vencrypt,x509vnc\nX509Key=~/.vnc/vncserver.key\nX509Cert=~/.vnc/vncserver.crt\n" >> ~/.vnc/config
 
 # 自動的にパスワードを設定
 echo -e "$password\n$password\nn" | vncserver :1
