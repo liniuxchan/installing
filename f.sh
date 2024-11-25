@@ -4,7 +4,7 @@ pkg install openssl-tool tigervnc fluxbox firefox -y && pkg upgrade -y
 # パスワードを非表示で入力させて変数に保存
 echo "🥳Hello everyone! I'm Liniuxchan!"
 while true; do
-  read -s -p "🤗Tell me your vnc-password!" password
+  read -s -p "🤗Tell me your vnc-password!:" password
   echo
   if [ ${#password} -ge 6 ]; then
     echo "😆!thx!"
@@ -16,7 +16,7 @@ done
 
 mkdir ~/.vnc
 openssl req -x509 -newkey rsa:4096 -keyout ~/.vnc/vncserver.key -out ~/.vnc/vncserver.crt -days 365 -nodes -subj "/C=JP/ST=vurtualTokyo/L=vurtual渋Shibuya/O=Liniuxchan and Friends/OU=playing with linux/CN=liniuxchan on your phone"
-printf　'SecurityTypes=vencrypt,x509vnc\nX509Key=~/.vnc/myvnc.key\nX509Cert=~/.vnc/myvnc.crt'　> ~/.vnc/configLiniux
+printf "SecurityTypes=vencrypt,x509vnc\nX509Key=~/.vnc/myvnc.key\nX509Cert=~/.vnc/myvnc.crt\n" >> ~/.vnc/config
 vncserver :1
 unset liniuxchan_your_vnc_password
 #set
