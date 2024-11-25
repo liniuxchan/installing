@@ -1,5 +1,5 @@
 pkg install x11-repo && pkg update
-pkg install openssl tigervnc fluxbox firefox -y && pkg upgrade -y
+pkg install openssl-tool tigervnc fluxbox firefox -y && pkg upgrade -y
 set -x
 # パスワードを非表示で入力させて変数に保存
 echo "パスワードを入力してください:"
