@@ -1,10 +1,36 @@
-<script>
-    function copyToClipboard() {
-        const text = document.getElementById('textToCopy').value;
-        navigator.clipboard.writeText(text).then(() => {
-            alert('コピーしました！');
-        }).catch(err => {
-            alert('コピーに失敗しました: ' + err);
-        });
-    }
-</script>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>クリップボードコピー</title>
+</head>
+<body>
+    <h1>クリップボードにコピーするデモ</h1>
+    <input type="text" id="textToCopy" value="コピーしたいテキスト" readonly>
+    <button onclick="copyToClipboard()">コピー</button>
+
+    <p id="message" style="color: green; display: none;">コピーしました！</p>
+
+    <script>
+        function copyToClipboard() {
+            // テキストボックスを取得
+            const textBox = document.getElementById('textToCopy');
+            // テキストボックスの内容を選択
+            textBox.select();
+            textBox.setSelectionRange(0, 99999); // モバイル対応
+            
+            try {
+                // クリップボードにコピー
+                document.execCommand('copy');
+                // コピー成功メッセージを表示
+                const message = document.getElementById('message');
+                message.style.display = 'block';
+                setTimeout(() => message.style.display = 'none', 2000);
+            } catch (err) {
+                alert('コピーに失敗しました: ' + err);
+            }
+        }
+    </script>
+</body>
+</html>
