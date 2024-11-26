@@ -21,6 +21,7 @@ printf "SecurityTypes=X509Vnc\nX509Key=/data/data/com.termux/files/home/.vnc/vnc
 echo $password
 # 自動的にパスワードを設定
 rm /data/data/com.termux/files/usr/tmp/.X1-lock
+rm /data/data/com.termux/files/usr/tmp/.X11-unix/X1
 pkill vnc
 echo -e "$password\n$password\nn" | vncserver :1
 unset liniuxchan_your_vnc_password
